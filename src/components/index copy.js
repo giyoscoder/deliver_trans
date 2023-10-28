@@ -12,5 +12,4 @@ export {default as Info} from './Info';
 export {default as Footer} from './Footer';
 export {default as Modal} from './Modal'
 export {default as Calculator} from './Calculator'
-export {default as CalculatorTwo} from './CalculatorTwo'
 export {default as Map} from './Map'

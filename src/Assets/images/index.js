@@ -30,5 +30,7 @@ export {default as translater} from './translate.svg';
 // Modal bg
 export {default as modalBg} from './modalbg.png'
 
+export {default as location} from './locations.png';
+
 
 

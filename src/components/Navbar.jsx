@@ -20,7 +20,7 @@ const Navbar = () => {
     <div>
       <nav className=" bg-darkMain py-5">
         <div className="container flex items-center justify-between">
-          <Link to="#" className="cursor-pointer">
+          <Link to="/" className="cursor-pointer">
             <img src={logo} alt="transLogo" />
           </Link>
           <Link
