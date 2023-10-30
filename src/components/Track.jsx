@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import TrackCard from "./TrackCard";
 import {furgon, furgon2, gurzavik, gurzavik2, miniCal} from '../Assets/images'
@@ -9,8 +9,9 @@ const CARD_DATA = [
     {name: 'Грузовик', img: gurzavik2 , book:'Заказать', calImg: miniCal},
 ]
 
-
 const Track = () => {
+  const [choseType, setChoseType] = useState('');
+
   return (
     <div className="bg-[#F3F9FF] pb-24">
       <div className="container">
@@ -19,12 +20,10 @@ const Track = () => {
             {["Тент", "Борт", "Рефрижератор", "Фургон"].map((value, idx) => {
               return (
                 <NavLink
-                  to={value}
-                  className={`${({ isActive }) =>
-                    isActive
-                      ? "active"
-                      : "inactive"} hover:text-white text-lg font-bold  text-center py-[17px] w-[319px] rounded-xl text-[#028BC1]  hover:bg-[#028BC1]`}
+                  to={'/'}
+                  className={`${choseType === value && 'bg-[#028BC1]'} hover:text-white text-lg font-bold  text-center py-[17px] w-[319px] rounded-xl text-[#028BC1]  hover:bg-[#028BC1]`}
                   key={idx}
+                  onClick={()=> setChoseType(value)}
                 >
                   {value}
                 </NavLink>

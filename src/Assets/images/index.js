@@ -31,6 +31,6 @@ export {default as translater} from './translate.svg';
 export {default as modalBg} from './modalbg.png'
 
 export {default as location} from './locations.png';
-
+export {default as loremImg} from './loremImg.png'
 
 

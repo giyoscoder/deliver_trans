@@ -45,7 +45,7 @@ const CalculatorTwo = () => {
       >
         <div className="">
           {/* input */}
-          <div className="flex items-center gap-[30px] mt-[30px]">
+          <div className="flex items-center gap-[30px] mt-[30px] ">
             <input
               className="py-[16px] pl-[21px] text-[#667582] text-base font-semibold outline-none rounded-xl border border-[#D6EAFF] bg-white w-full"
               type="text"
@@ -163,63 +163,70 @@ const CalculatorTwo = () => {
                 </div>
 
                 {/* Drop */}
-                {drop && (
-                  <div className="grid grid-cols-2 border border-[#D6EAFF] rounded-b-xl absolute bg-white w-full top-full left-0">
-                    <div className="flex items-center gap-[10px] pl-[30px]  py-[30px]">
-                      <p className="text-lg text-darkMain font-bold rounded-full p-[13px] bg-[#D6EAFF] inline-block">
-                        <CgController />
-                      </p>
-                      <div className="">
-                        <p className="text-lg font-semibold text-[#C7C7C7]">
-                          Максимальные габариты
+                <AnimatePresence>
+                  {drop && (
+                    <motion.div
+                      initial={{ y: -30, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -30, opacity: 0 }}
+                      className="grid grid-cols-2 border border-[#D6EAFF] rounded-b-xl absolute bg-white w-full top-full left-0"
+                    >
+                      <div className="flex items-center gap-[10px] pl-[30px]  py-[30px]">
+                        <p className="text-lg text-darkMain font-bold rounded-full p-[13px] bg-[#D6EAFF] inline-block">
+                          <CgController />
                         </p>
-                        <div className="flex items-center font-bold gap-[10px] ">
-                          <AiFillMinusCircle
-                            size="20"
-                            className="text-darkMain cursor-pointer"
-                            onClick={() => [
-                              size != 0 && setSize((prev) => prev - 1),
-                            ]}
-                          />
-                          {size}м
-                          <AiFillPlusCircle
-                            size="20"
-                            className="text-darkMain cursor-pointer"
-                            onClick={() => setSize((prev) => prev + 1)}
-                          />
+                        <div className="">
+                          <p className="text-lg font-semibold text-[#C7C7C7]">
+                            Максимальные габариты
+                          </p>
+                          <div className="flex items-center font-bold gap-[10px] ">
+                            <AiFillMinusCircle
+                              size="20"
+                              className="text-darkMain cursor-pointer"
+                              onClick={() => [
+                                size != 0 && setSize((prev) => prev - 1),
+                              ]}
+                            />
+                            {size}м
+                            <AiFillPlusCircle
+                              size="20"
+                              className="text-darkMain cursor-pointer"
+                              onClick={() => setSize((prev) => prev + 1)}
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="flex items-center gap-[10px] pl-[30px]  border-l border-[#D6EAFF] py-[30px] ">
-                      <p className="text-lg text-darkMain font-bold rounded-full p-[13px] bg-[#D6EAFF] inline-block">
-                        <PiArmchairLight />
-                      </p>
-                      <div className="">
-                        <p className="text-lg font-semibold text-[#C7C7C7]">
-                          Объем
+                      <div className="flex items-center gap-[10px] pl-[30px]  border-l border-[#D6EAFF] py-[30px] ">
+                        <p className="text-lg text-darkMain font-bold rounded-full p-[13px] bg-[#D6EAFF] inline-block">
+                          <PiArmchairLight />
                         </p>
-                        <div className="flex items-center font-bold gap-[10px] ">
-                          <AiFillMinusCircle
-                            size="20"
-                            className="text-darkMain cursor-pointer"
-                            onClick={() => [
-                              volume != 0 && setVolume((prev) => prev - 1),
-                            ]}
-                          />
-                          {volume}{" "}
-                          <span>
-                            м<sup>3</sup>{" "}
-                          </span>
-                          <AiFillPlusCircle
-                            size="20"
-                            className="text-darkMain cursor-pointer"
-                            onClick={() => setVolume((prev) => prev + 1)}
-                          />
+                        <div className="">
+                          <p className="text-lg font-semibold text-[#C7C7C7]">
+                            Объем
+                          </p>
+                          <div className="flex items-center font-bold gap-[10px] ">
+                            <AiFillMinusCircle
+                              size="20"
+                              className="text-darkMain cursor-pointer"
+                              onClick={() => [
+                                volume != 0 && setVolume((prev) => prev - 1),
+                              ]}
+                            />
+                            {volume}{" "}
+                            <span>
+                              м<sup>3</sup>{" "}
+                            </span>
+                            <AiFillPlusCircle
+                              size="20"
+                              className="text-darkMain cursor-pointer"
+                              onClick={() => setVolume((prev) => prev + 1)}
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                )}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
           </div>

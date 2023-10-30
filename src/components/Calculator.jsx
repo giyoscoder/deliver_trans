@@ -211,8 +211,14 @@ const Calculator = () => {
               </div>
 
               {/* Drop */}
+              <AnimatePresence>
               {drop && (
-                <div className="grid grid-cols-2 border border-[#D6EAFF] rounded-b-xl absolute bg-white w-full top-full left-0">
+                <motion.div
+                  initial={{ y: -30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -30, opacity: 0 }}
+                  className="grid grid-cols-2 border border-[#D6EAFF] rounded-b-xl absolute bg-white w-full top-full left-0"
+                >
                   <div className="flex items-center gap-[10px] pl-[30px]  py-[30px]">
                     <p className="text-lg text-darkMain font-bold rounded-full p-[13px] bg-[#D6EAFF] inline-block">
                       <CgController />
@@ -266,8 +272,9 @@ const Calculator = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               )}
+              </AnimatePresence>
             </div>
           </div>
         </div>

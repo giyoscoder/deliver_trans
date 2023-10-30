@@ -21,7 +21,11 @@ module.exports = {
         'four': "url('/src/Assets/images/four.png')",
         'five': "url('/src/Assets/images/five.png')",
         'modal': 'linear-gradient(rgba(0, 103, 144, 0.50), rgba(0, 103, 144, 0.50))',
-        'modalBg': "url('/src/Assets/images/modalbg.png')"
+        'modalBg': "url('/src/Assets/images/modalbg.png')",
+        'loadingProducts': "url('/src/Assets/images/loadingPage.png')",
+        'loadingProducts2': "url('/src/Assets/images/loadingPage2.png')",
+        'loadingPageLinear': "linear-gradient(270deg, rgba(0, 103, 144, 0.00) 0%, #006790 100%)",
+
       }
     },
   },

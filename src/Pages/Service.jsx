@@ -45,7 +45,7 @@ const Service = () => {
         <div>
           <h1 className="text-[80px] font-bold">Калькулятор</h1>
 
-          <div className="bg-white mt-[60px] pb-[30px]">
+          <div className="bg-white overflow-hidden mt-[60px] pb-[30px] rounded-xl">
             <div className=" py-[30px] px-[60px] rounded-xl">
               <div className="flex items-center justify-between">
                 <div className="bg-darkMain rounded-xl p-[10px] flex item-center justify-between">

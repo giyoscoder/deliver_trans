@@ -30,4 +30,6 @@
 
 .form  {
   background: linear-gradient(rgba(0, 103, 144, 0.75), rgba(0, 103, 144, 0.75) ), url('./Assets/images/form.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

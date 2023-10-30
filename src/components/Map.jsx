@@ -8,10 +8,10 @@ import {BsTelephoneFill} from 'react-icons/bs'
 
 const Map = () => {
   return (
-    <div className="mt-[30px] pb-[100px]">
+    <div className="mt-[30px] pb-[100px] ">
       <div className="container">
         <div className="grid grid-cols-3 h-full">
-          <div className="col-span-2 ">
+          <div className="col-span-2 rounded-xl">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11983.660102364038!2d69.2644362!3d41.3324611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b6cbd7e49a1%3A0xf23c3817c486d743!2sAmity%20University%20Tashkent!5e0!3m2!1sru!2s!4v1698486339861!5m2!1sru!2s"
               width="100%"
