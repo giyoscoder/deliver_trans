@@ -19,7 +19,7 @@ const Calculator = () => {
   const [drop, setDrop] = useState(false);
   const [rubl, setRubl] = useState(1000);
   const [тепле, setTепле] = useState("тепле");
-  const [properties, setProperties] = useState([]);
+  const [properties, setProperties] = useState(['Названиеe опции']);
 
   const [options, setOptions] = useState(false);
 
@@ -278,7 +278,6 @@ const Calculator = () => {
             </div>
           </div>
         </div>
-
         <div className="mt-[30px]">
           <div className="flex items-center justify-between text-xl font-bold text-darkMain">
             <p>Страхование груза</p>
@@ -352,10 +351,13 @@ const Calculator = () => {
           </div>
         </div>
       </div>
+
+
+
       <div className=" mt-[30px] border-y border-[#D6EAFF] ">
-        <div className="py-[30px]  border-b border-[#D6EAFF] px-[60px]">
+        <div  className="  cursor-pointer border-b border-[#D6EAFF] px-[60px]">
           <div
-            className="flex justify-between items-center "
+            className="flex py-[30px] justify-between items-center "
             onClick={() => setOptions((prev) => !prev)}
           >
             <p className="text-xl text-[#667582] font-bold">Приоритетные</p>
@@ -374,7 +376,7 @@ const Calculator = () => {
                 }}
                 animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
                 exit={{ y: -20, opacity: 0 }}
-                className="mt-[30px] flex items-center gap-[10px]"
+                className="mb-[30px] flex items-center gap-[10px]"
               >
                 <button
                   onClick={() => propertiesHandler("Названиеe опции")}
@@ -386,7 +388,7 @@ const Calculator = () => {
                   Названиеe опции
                   {properties.includes("Названиеe опции") && (
                     <BsCheckCircleFill className="text-white" />
-                  )}{" "}
+                  )}
                 </button>
 
                 <button
@@ -418,6 +420,7 @@ const Calculator = () => {
             )}
           </AnimatePresence>
         </div>
+
         <div className="py-[30px]  border-b border-[#D6EAFF] px-[60px]">
           <div className="flex justify-between items-center">
             <p className="text-xl text-[#667582] font-bold">
@@ -426,6 +429,7 @@ const Calculator = () => {
             <IoIosArrowDown />
           </div>
         </div>
+
         <div className="py-[30px] px-[60px]">
           <div className="flex justify-between items-center">
             <p className="text-xl text-[#667582] font-bold">
@@ -434,7 +438,9 @@ const Calculator = () => {
             <IoIosArrowDown />
           </div>
         </div>
+
       </div>
+
       <div className="text-center mt-[30px]">
         <button className="text-lg py-[18px] px-[21px] font-bold rounded-xl bg-[#FFD200] mx-auto">
           Показать еще

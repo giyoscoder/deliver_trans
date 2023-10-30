@@ -33,4 +33,12 @@ export {default as modalBg} from './modalbg.png'
 export {default as location} from './locations.png';
 export {default as loremImg} from './loremImg.png'
 
+// Work bg
+export {default as workOne} from './workOne.png'
+export {default as workTwo} from './workTwo.png'
+export {default as workThree} from './workThree.png'
+export {default as workFour} from './workFour.png'
+export {default as workFive} from './workfive.png'
+export {default as workSix} from './workSix.png'
+
 
