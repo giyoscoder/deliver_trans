@@ -25,7 +25,7 @@ module.exports = {
         'loadingProducts': "url('/src/Assets/images/loadingPage.png')",
         'loadingProducts2': "url('/src/Assets/images/loadingPage2.png')",
         'loadingPageLinear': "linear-gradient(270deg, rgba(0, 103, 144, 0.00) 0%, #006790 100%)",
-
+        'contactimg': "url('/src/Assets/images/contactShow.png')"
       }
     },
   },
