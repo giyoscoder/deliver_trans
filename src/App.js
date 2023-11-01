@@ -8,13 +8,16 @@ import {
   LoadingProductsFour,
   Cargo,
   Contact,
-  Dashboard
+  Dashboard,
 } from "./Pages";
 import { Route, Routes } from "react-router-dom";
 import { Context } from "./Context/ModalContext";
 
 const App = () => {
   const { modalShow, setModalShow } = useContext(Context);
+  modalShow
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "");
   return (
     <div className="nunito bg-[#F3F9FF]">
       <Navbar />
@@ -27,9 +30,9 @@ const App = () => {
         <Route path="/loadingProducts4" element={<LoadingProductsFour />} />
         <Route path="/cargo" element={<Cargo />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
+      {/* <Dashboard /> */}
       {modalShow && <Modal />}
     </div>
   );

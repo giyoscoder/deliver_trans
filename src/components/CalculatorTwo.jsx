@@ -326,89 +326,93 @@ const CalculatorTwo = () => {
             </div>
           </div>
         </div>
-        <div className=" mt-[30px] border-y border-[#D6EAFF] ">
-          <div className="py-[30px]  border-b border-[#D6EAFF] px-[60px]">
-            <div
-              className="flex justify-between items-center "
-              onClick={() => setOptions((prev) => !prev)}
-            >
-              <p className="text-xl text-[#667582] font-bold">Приоритетные</p>
-              {options ? (
-                <IoIosArrowUp className="cursor-pointer" />
-              ) : (
-                <IoIosArrowDown className="cursor-pointer" />
-              )}
-            </div>
-            <AnimatePresence>
-              {options && (
-                <motion.div
-                  initial={{
-                    y: -20,
-                    opacity: 0,
-                  }}
-                  animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
-                  exit={{ y: -20, opacity: 0 }}
-                  className="mt-[30px] flex items-center gap-[10px]"
+      
+           <div className=" mt-[30px] border-y border-[#D6EAFF] ">
+        <div  className="  cursor-pointer border-b border-[#D6EAFF] px-[60px]">
+          <div
+            className="flex py-[30px] justify-between items-center "
+            onClick={() => setOptions((prev) => !prev)}
+          >
+            <p className="text-xl text-[#667582] font-bold">Приоритетные</p>
+            {options ? (
+              <IoIosArrowUp className="cursor-pointer" />
+            ) : (
+              <IoIosArrowDown className="cursor-pointer" />
+            )}
+          </div>
+          <AnimatePresence>
+            {options && (
+              <motion.div
+                initial={{
+                  y: -20,
+                  opacity: 0,
+                }}
+                animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+                exit={{ y: -20, opacity: 0 }}
+                className="mb-[30px] flex items-center gap-[10px]"
+              >
+                <button
+                  onClick={() => propertiesHandler("Названиеe опции")}
+                  className={` ${
+                    properties.includes("Названиеe опции") &&
+                    "bg-darkMain text-white"
+                  } py-[7px] flex items-center gap-[10px] px-[20px] rounded-3xl bg-[#F3F9FF] text-lg font-semibold text-[#667582] outline-none`}
                 >
-                  <button
-                    onClick={() => propertiesHandler("Названиеe опции")}
-                    className={` ${
-                      properties.includes("Названиеe опции") &&
-                      "bg-darkMain text-white"
-                    } py-[7px] flex items-center gap-[10px] px-[20px] rounded-3xl bg-[#F3F9FF] text-lg font-semibold text-[#667582] outline-none`}
-                  >
-                    Названиеe опции
-                    {properties.includes("Названиеe опции") && (
-                      <BsCheckCircleFill className="text-white" />
-                    )}{" "}
-                  </button>
+                  Названиеe опции
+                  {properties.includes("Названиеe опции") && (
+                    <BsCheckCircleFill className="text-white" />
+                  )}
+                </button>
 
-                  <button
-                    onClick={() => propertiesHandler("Название опцииi")}
-                    className={` ${
-                      properties.includes("Название опцииi") &&
-                      "bg-darkMain text-white"
-                    } py-[7px] flex items-center gap-[10px] px-[20px] rounded-3xl bg-[#F3F9FF] text-lg font-semibold text-[#667582] outline-none`}
-                  >
-                    Название опцииi{" "}
-                    {properties.includes("Название опцииi") && (
-                      <BsCheckCircleFill className="text-white" />
-                    )}{" "}
-                  </button>
+                <button
+                  onClick={() => propertiesHandler("Название опцииi")}
+                  className={` ${
+                    properties.includes("Название опцииi") &&
+                    "bg-darkMain text-white"
+                  } py-[7px] flex items-center gap-[10px] px-[20px] rounded-3xl bg-[#F3F9FF] text-lg font-semibold text-[#667582] outline-none`}
+                >
+                  Название опцииi{" "}
+                  {properties.includes("Название опцииi") && (
+                    <BsCheckCircleFill className="text-white" />
+                  )}{" "}
+                </button>
 
-                  <button
-                    onClick={() => propertiesHandler("Название опции")}
-                    className={` ${
-                      properties.includes("Название опции") &&
-                      "bg-darkMain text-white"
-                    } py-[7px] flex items-center gap-[10px] px-[20px] rounded-3xl bg-[#F3F9FF] text-lg font-semibold text-[#667582] outline-none`}
-                  >
-                    Название опции{" "}
-                    {properties.includes("Название опции") && (
-                      <BsCheckCircleFill className="text-white" />
-                    )}{" "}
-                  </button>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-          <div className="py-[30px]  border-b border-[#D6EAFF] px-[60px]">
-            <div className="flex justify-between items-center">
-              <p className="text-xl text-[#667582] font-bold">
-                Услуги при заборе груза
-              </p>
-              <IoIosArrowDown />
-            </div>
-          </div>
-          <div className="py-[30px] px-[60px]">
-            <div className="flex justify-between items-center">
-              <p className="text-xl text-[#667582] font-bold">
-                Услуги при заборе груза
-              </p>
-              <IoIosArrowDown />
-            </div>
+                <button
+                  onClick={() => propertiesHandler("Название опции")}
+                  className={` ${
+                    properties.includes("Название опции") &&
+                    "bg-darkMain text-white"
+                  } py-[7px] flex items-center gap-[10px] px-[20px] rounded-3xl bg-[#F3F9FF] text-lg font-semibold text-[#667582] outline-none`}
+                >
+                  Название опции{" "}
+                  {properties.includes("Название опции") && (
+                    <BsCheckCircleFill className="text-white" />
+                  )}{" "}
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        <div className="py-[30px]  border-b border-[#D6EAFF] px-[60px]">
+          <div className="flex justify-between items-center">
+            <p className="text-xl text-[#667582] font-bold">
+              Услуги при заборе груза
+            </p>
+            <IoIosArrowDown />
           </div>
         </div>
+
+        <div className="py-[30px] px-[60px]">
+          <div className="flex justify-between items-center">
+            <p className="text-xl text-[#667582] font-bold">
+              Услуги при заборе груза
+            </p>
+            <IoIosArrowDown />
+          </div>
+        </div>
+
+      </div>
         <div className="text-center mt-[30px]">
           <button className="text-lg py-[18px] px-[21px] font-bold rounded-xl bg-[#FFD200] mx-auto">
             Показать еще

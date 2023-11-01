@@ -6,7 +6,7 @@ const Modal = () => {
   const { modalShow, setModalShow } = useContext(Context);
   return (
     <>
-      <div className="rounded-xl w-[1500px] z-50 p-[60px] bg-white bg-modalBg bg-no-repeat bg-right-top absolute left-[50%]  top-[60%] -translate-x-[50%] -translate-y-[50%]">
+      <div className="rounded-xl w-[1500px] z-50 p-[60px] bg-white bg-modalBg bg-no-repeat bg-right-top absolute left-[50%]  top-[50%] -translate-x-[50%] -translate-y-[50%]">
         <AiOutlineClose
           size="34"
           className="absolute top-3 right-3 text-white cursor-pointer"
