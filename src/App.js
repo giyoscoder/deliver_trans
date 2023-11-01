@@ -4,6 +4,7 @@ import {
   Service,
   LoadingProducts,
   LoadingProductsTwo,
+  LoadingProductsThree,
   Cargo,
   Contact,
 } from "./Pages";
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/service" element={<Service />} />
         <Route path="/loadingProducts" element={<LoadingProducts />} />
         <Route path="/loadingProducts2" element={<LoadingProductsTwo />} />
+        <Route path="/loadingProducts3" element={<LoadingProductsThree />} />
         <Route path="/cargo" element={<Cargo />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
