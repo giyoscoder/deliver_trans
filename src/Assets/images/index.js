@@ -43,13 +43,27 @@ export { default as workSix } from "./workSix.png";
 export { default as Contactimg } from "./contactShow.png";
 
 // concats bg
-export {default as youtube} from './youtube.svg';
-export{default as instagram} from './instagram.svg';
-export {default as wek} from './VK.svg';
-export {default as ok} from './OK.svg';
+export { default as youtube } from "./youtube.svg";
+export { default as instagram } from "./instagram.svg";
+export { default as wek } from "./VK.svg";
+export { default as ok } from "./OK.svg";
 
-export {default as phone} from './phone.png';
-export {default as email} from './email.png';
-export {default as data} from './data.png';
-export {default as locationcontact} from './location.png';
-export {default as address} from './address.png'
+export { default as phone } from "./phone.png";
+export { default as email } from "./email.png";
+export { default as data } from "./data.png";
+export { default as locationcontact } from "./location.png";
+export { default as address } from "./address.png";
+
+// Client page images;
+export { default as clientOne } from "./clinetOne.png";
+export { default as clientTwo } from "./clientTwo.png";
+export { default as clientThree } from "./clientThree.png";
+export { default as clientFour } from "./clientFour.png";
+export { default as clientFive } from "./clientFive.png";
+export { default as clientSix } from "./clinetSix.png";
+export { default as clientSeven } from "./clientSeven.png";
+export { default as clientEight } from "./clientEight.png";
+export { default as sertificiate } from "./sertificiate.png";
+export { default as drug } from "./drug.png";
+export { default as carBack } from "./carBack.png";
+export {default as clientTree} from './clientTree.png'
