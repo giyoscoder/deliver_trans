@@ -5,8 +5,10 @@ import {
   LoadingProducts,
   LoadingProductsTwo,
   LoadingProductsThree,
+  LoadingProductsFour,
   Cargo,
   Contact,
+  Dashboard
 } from "./Pages";
 import { Route, Routes } from "react-router-dom";
 import { Context } from "./Context/ModalContext";
@@ -22,8 +24,10 @@ const App = () => {
         <Route path="/loadingProducts" element={<LoadingProducts />} />
         <Route path="/loadingProducts2" element={<LoadingProductsTwo />} />
         <Route path="/loadingProducts3" element={<LoadingProductsThree />} />
+        <Route path="/loadingProducts4" element={<LoadingProductsFour />} />
         <Route path="/cargo" element={<Cargo />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
       {modalShow && <Modal />}

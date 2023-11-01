@@ -203,57 +203,102 @@ const LoadingProductsThree = () => {
       <div className="bg-white">
         <div className="container">
           <h1 className="text-[80px] font-bold">Рекомендации наших клиентов</h1>
-          <div className="mt-[60px]">
-            <div className="space-y-[30px]">
-              <div className="flex items-start bg-[#F3F9FF] rounded-xl ">
-                <div className="w-full h-full">
-                  <img
-                    src={clientThree}
-                    alt=""
-                    className="bg-center bg-cover h-full w-full"
-                  />
+          <div className="mt-[60px] pb-[100px]">
+            <div className="grid grid-cols-2 gap-[30px]">
+              <div className="space-y-[30px]">
+                <div className="grid grid-cols-3 items-start bg-[#F3F9FF] rounded-xl ">
+                  <div className="h-full w-full">
+                    <img
+                      src={clientThree}
+                      alt=""
+                      className="bg-center bg-cover h-full w-full rounded-s-xl"
+                    />
+                  </div>
+                  <div className="col-span-2 p-[30px]">
+                    <p className="text-3xl font-bold">Качество перевозок</p>
+                    <p className="text-lg font-semibold mt-[30px] ">
+                      Контролируем выполнение погрузки и разгрузки. Следим за
+                      правильным размещением груза в кузове, при необходимости
+                      крепим его стяжными ремнями. На машинах с рефрижератором
+                      установлены терморегистраторы. На маршруты ставим только
+                      технически исправные авто, которыми управляют
+                      водители-экспедиторы с опытом работы более 5 лет. Используем
+                      систему мониторинга усталости водителей. Несем
+                      ответственность за сохранность груза, поэтому для нас важно
+                      не только вовремя доставить груз, но и сохранить его в
+                      исходном виде
+                    </p>
+                  </div>
                 </div>
-                <div className=" p-[30px]">
-                  <p className="text-3xl font-bold">Качество перевозок</p>
-                  <p className="text-lg font-semibold mt-[30px]">
-                    Контролируем выполнение погрузки и разгрузки. Следим за
-                    правильным размещением груза в кузове, при необходимости
-                    крепим его стяжными ремнями. На машинах с рефрижератором
-                    установлены терморегистраторы. На маршруты ставим только
-                    технически исправные авто, которыми управляют
-                    водители-экспедиторы с опытом работы более 5 лет. Используем
-                    систему мониторинга усталости водителей. Несем
-                    ответственность за сохранность груза, поэтому для нас важно
-                    не только вовремя доставить груз, но и сохранить его в
-                    исходном виде
-                  </p>
+                <div className="grid grid-cols-3 bg-[#F3F9FF] rounded-xl ">
+                  <div className="h-full">
+                    <img
+                      src={clientTree}
+                      alt=""
+                      className="bg-center bg-cover h-[350px] w-[250px] rounded-s-xl"
+                    />
+                  </div>
+                  <div className="col-span-2 p-[30px]">
+                    <p className="text-3xl font-bold">Экологичность</p>
+                    <p className="text-lg font-semibold mt-[30px]">
+                      Понимаем, что репутация заказчика влияет на успех его
+                      проекта. А финансовые показатели заказчиков напрямую влияют
+                      на наши показатели. Не боимся браться за выполнение
+                      нестандартных заказов. Страхуем груз на случай форс-мажора.
+                      Несем полную материальную ответственность за груз во время
+                      транспортировки.
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start bg-[#F3F9FF] rounded-xl ">
-                <div className="w-full h-full">
-                  <img
-                    src={clientTree}
-                    alt=""
-                    className="bg-center bg-cover h-full w-full"
-                  />
+              <div className="space-y-[30px]">
+                <div className="grid grid-cols-3  bg-[#F3F9FF] rounded-xl ">
+                  <div className="h-full w-[250px]">
+                    <img
+                      src={clientSeven}
+                      alt=""
+                      className="bg-center bg-cover h-[350px] w-full rounded-s-xl"
+                    />
+                  </div>
+                  <div className="col-span-2 p-[30px]">
+                    <p className="text-3xl font-bold">Команда профессионалов</p>
+                    <p className="text-lg font-semibold mt-[30px] ">
+                      Понимаем, что репутация заказчика влияет на успех его
+                      проекта. А финансовые показатели заказчиков
+                      напрямую влияют на наши показатели. Не боимся
+                      браться за выполнение нестандартных заказов.
+                      Страхуем груз на случай форс-мажора. Несем полную
+                      материальную ответственность за груз во время
+                      транспортировки.
+                    </p>
+                  </div>
                 </div>
-                <div className=" p-[30px]">
-                  <p className="text-3xl font-bold">Экологичность</p>
-                  <p className="text-lg font-semibold mt-[30px]">
-                    Понимаем, что репутация заказчика влияет на успех его
-                    проекта. А финансовые показатели заказчиков напрямую влияют
-                    на наши показатели. Не боимся браться за выполнение
-                    нестандартных заказов. Страхуем груз на случай форс-мажора.
-                    Несем полную материальную ответственность за груз во время
-                    транспортировки.
-                  </p>
+                <div className="grid grid-cols-3  bg-[#F3F9FF] rounded-xl ">
+                  <div className="h-full col-span-1  w-full">
+                    <img
+                      src={clientEight}
+                      alt=""
+                      className="bg-center bg-cover h-[300px] w-full rounded-s-xl"
+                    />
+                  </div>
+                  <div className="col-span-2 p-[30px]">
+                    <p className="text-3xl font-bold">Наши клиенты</p>
+                    <p className="text-lg font-semibold mt-[30px]">
+                      Для нас важны доверие и уважение заказчиков. В
+                      периоды сезонного взвинчивания цен соблюдаем
+                      условия договора и фиксированные ставки по
+                      тарифам вне зависимости от погодных условий и
+                      ситуации на рынке.
+                    </p>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
-      
+
     </div>
   );
 };

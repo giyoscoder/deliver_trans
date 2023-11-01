@@ -1,4 +1,5 @@
 export { default as logo } from "./logo.svg";
+export {default as logo2}from './logo2.svg';
 export { default as showcaseImg } from "./showcase.png";
 export { default as maneger } from "./meneger_person.png";
 export { default as miniCal } from "./miniCal.svg";
