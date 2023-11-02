@@ -14,3 +14,4 @@ export {default as Modal} from './Modal'
 export {default as Calculator} from './Calculator'
 export {default as CalculatorTwo} from './CalculatorTwo'
 export {default as Map} from './Map'
+export {default as Application} from './Applications';

@@ -20,7 +20,7 @@ const App = () => {
     : (document.body.style.overflow = "");
   return (
     <div className="nunito bg-[#F3F9FF]">
-      <Navbar />
+      {/* <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/service" element={<Service />} />
@@ -31,8 +31,8 @@ const App = () => {
         <Route path="/cargo" element={<Cargo />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer />
-      {/* <Dashboard /> */}
+      <Footer /> */}
+      <Dashboard />
       {modalShow && <Modal />}
     </div>
   );
