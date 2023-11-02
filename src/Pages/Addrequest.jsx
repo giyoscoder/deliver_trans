@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { logo2 } from "../Assets/images";
 import {
   AiFillSetting,
   AiFillMinusCircle,
   AiFillCheckCircle,
-  AiFillPlusCircle, 
+  AiFillPlusCircle,
+  AiOutlineSend,
 } from "react-icons/ai";
 import { BsArrowDown } from "react-icons/bs";
 import { LiaSearchSolid } from "react-icons/lia";
@@ -17,9 +18,25 @@ import {
   MdOutlineKeyboardArrowDown,
 } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
+import ScrollToBottom from "react-scroll-to-bottom";
 
 import { workOne, workTwo } from "../Assets/images";
 import { Link } from "react-router-dom";
+
+const MONTH = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 const Addrequest = () => {
   const [addReq, setAddReq] = useState(false);
@@ -30,7 +47,33 @@ const Addrequest = () => {
   const [services, setServices] = useState([]);
   const [size, setSize] = useState(1);
   const [weight, setWeight] = useState(10);
-  const [driver, setDriver] = useState('палетах')
+  const [driver, setDriver] = useState("палетах");
+  const chat = useRef("");
+  const [dataChat, setDataChat] = useState([]);
+
+  const chatHandler = (event) => {
+    if (chat.current.value != "") {
+      const day = new Date(Date.now()).getDay();
+      const month = new Date(Date.now()).getMonth();
+      const year = new Date(Date.now()).getFullYear();
+      const time = new Date(Date.now()).getHours();
+      const minute = new Date(Date.now()).getMinutes();
+      const data = {
+        person: "user",
+        data: chat.current.value,
+        day,
+        month,
+        year,
+        time,
+        minute,
+      };
+      
+      setDataChat((prev) => [...prev, data]);
+      console.log(chat.current.value);
+
+      // chat.current.value = " ";
+    }
+  };
 
   const servicesHandler = (e) => {
     if (services.includes(e)) {
@@ -40,7 +83,6 @@ const Addrequest = () => {
     }
   };
 
-
   return (
     <div className="px-[30px] bg-white pt-[30px] pb-[100px] flex items-start gap-[30px]">
       {/* left side dashboard size */}
@@ -49,11 +91,14 @@ const Addrequest = () => {
           <span>Заявка на перевозку #628</span>{" "}
           <span className="ml-[60px]">12 500 ₽</span>
         </p>
-       <div>
-       <Link to='/' className="font-bold inline-block font-lg p-[17px] rounded-xl bg-[#F3F9FF] text-[#667582] my-[30px] ">
-          Отправить запрос
-        </Link>
-       </div>
+        <div>
+          <Link
+            to="/"
+            className="font-bold inline-block font-lg p-[17px] rounded-xl bg-[#F3F9FF] text-[#667582] my-[30px] "
+          >
+            Отправить запрос
+          </Link>
+        </div>
         <div className="rounded-xl p-[10px] bg-darkMain inline-flex items-center">
           <button
             className={`py-[8px] px-[60px] rounded-md ${
@@ -573,6 +618,58 @@ const Addrequest = () => {
             rows="10"
             className="w-full outline-none border-none p-[30px]"
           ></textarea>
+        </div>
+
+        <div className="border border-[#D6EAFF] rounded-xl ">
+          <p className="text-[22px] font-semibold p-[30px] border-b border-[#D6EAFF] w-full">
+            Журнал
+          </p>
+          <div className="w-full h-[300px] outline-none border-none p-[30px]">
+           <ScrollToBottom className="h-full w-full overflow-y-scroll overflow-x-hidden">
+            {dataChat.map((value, idx) => {
+              return (
+                <div
+                  className={`rounded-t-xl w-[240px] mb-[20px] ${
+                    idx % 2 != 0 ? "mr-auto  rounded-bl-0 rounded-br-xl" : "ml-auto rounded-br-0 rounded-bl-xl bg-[#F3F9FF] "
+                  }   border-[#D6EAFF] border p-[20px]  `}
+                >
+                  <p className="text-base text-[#C7C7C7] font-semibold">
+                    {value?.person}
+                  </p>
+                  <p className="text-lg font-semibold my-[10px]">
+                    {value?.data}
+                  </p>
+                  <div className="flex items-center justify-between text-[#C7C7C7] text-base">
+                    <div className="flex items-center gap-[5px]">
+                      <p>{value?.day}</p>
+                      <p>{MONTH[value?.month]}</p>
+                      <p> {value?.year}</p>
+                    </div>
+                    <p>
+                      {value?.time}:{value?.minute}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+            </ScrollToBottom> 
+          </div>
+          <div className="m-[30px] px-[20px] flex items-center justify-between bg-white py-[17px] border border-[#D6EAFF] rounded-xl">
+            <input
+              type="text"
+              className="w-full outline-none border-none"
+              ref={chat}
+              value={chat.current.value}
+              onKeyPress={(e)=>{
+                e.key === 'Enter' && chatHandler()
+              } }
+            />
+            <AiOutlineSend
+              size="20"
+              onClick={() => chatHandler()}
+              className="text-darkMain"
+            />
+          </div>
         </div>
       </div>
     </div>
