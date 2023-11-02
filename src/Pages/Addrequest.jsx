@@ -622,7 +622,7 @@ const Addrequest = () => {
 
         <div className="border border-[#D6EAFF] rounded-xl ">
           <p className="text-[22px] font-semibold p-[30px] border-b border-[#D6EAFF] w-full">
-            Журнал
+            Comments
           </p>
           <div className="w-full h-[300px] outline-none border-none p-[30px]">
            <ScrollToBottom className="h-full w-full overflow-y-scroll overflow-x-hidden">
