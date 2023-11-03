@@ -48,11 +48,12 @@ const Addrequest = () => {
   const [size, setSize] = useState(1);
   const [weight, setWeight] = useState(10);
   const [driver, setDriver] = useState("палетах");
-  const chat = useRef("");
+  const chat = useRef('');
   const [dataChat, setDataChat] = useState([]);
+  const [inputData, setInputData] = useState()
 
   const chatHandler = (event) => {
-    if (chat.current.value != "") {
+    if (event != "") {
       const day = new Date(Date.now()).getDay();
       const month = new Date(Date.now()).getMonth();
       const year = new Date(Date.now()).getFullYear();
@@ -60,7 +61,7 @@ const Addrequest = () => {
       const minute = new Date(Date.now()).getMinutes();
       const data = {
         person: "user",
-        data: chat.current.value,
+        data: event,
         day,
         month,
         year,
@@ -69,9 +70,8 @@ const Addrequest = () => {
       };
       
       setDataChat((prev) => [...prev, data]);
-      console.log(chat.current.value);
 
-      // chat.current.value = " ";
+      setInputData('')
     }
   };
 
@@ -117,6 +117,7 @@ const Addrequest = () => {
             Без палет
           </button>
         </div>
+
         <div className="my-[30px]">
           <p className="text-2xl font-bold text-[#667582]">Груз</p>
           <div className="flex items-center  gap-[30px] mt-[10px]">
@@ -625,7 +626,7 @@ const Addrequest = () => {
             Comments
           </p>
           <div className="w-full h-[300px] outline-none border-none p-[30px]">
-           <ScrollToBottom className="h-full w-full overflow-y-scroll overflow-x-hidden">
+           <ScrollToBottom className="h-full w-full overflow-y-scroll overflow-x-hidden ::w">
             {dataChat.map((value, idx) => {
               return (
                 <div
@@ -654,25 +655,29 @@ const Addrequest = () => {
             })}
             </ScrollToBottom> 
           </div>
-          <div className="m-[30px] px-[20px] flex items-center justify-between bg-white py-[17px] border border-[#D6EAFF] rounded-xl">
-            <input
-              type="text"
-              className="w-full outline-none border-none"
-              ref={chat}
-              value={chat.current.value}
-              onKeyPress={(e)=>{
-                e.key === 'Enter' && chatHandler()
-              } }
-            />
-            <AiOutlineSend
-              size="20"
-              onClick={() => chatHandler()}
-              className="text-darkMain"
-            />
+          <div>
+            <form action="" onSubmit={(e) => {
+              e.preventDefault()
+              chatHandler(inputData)
+            }} className="m-[30px] px-[20px] flex items-center justify-between bg-white py-[17px] border border-[#D6EAFF] rounded-xl">
+              <input
+                type="text"
+                className="w-full outline-none border-none"
+                value={inputData}
+                onChange={(e) => setInputData(e.target.value)}
+              />
+              <button type="submit">
+                <AiOutlineSend
+                  size="20"
+                  className="text-darkMain"
+                />
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
+
   );
 };
 
