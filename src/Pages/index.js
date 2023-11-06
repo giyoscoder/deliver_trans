@@ -6,3 +6,5 @@ export {default as LoadingProductsFour} from './LoadingProducts4'
 export {default as Cargo} from './Cargo';
 export {default as Contact} from './Contact';
 export{default as Dashboard} from './Dashboard';
+export{default as Login} from './Login';
+export {default as Setting} from './Setting';
